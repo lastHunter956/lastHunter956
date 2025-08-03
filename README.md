@@ -28,7 +28,7 @@
     <img src="https://github.com/devicons/devicon/blob/master/icons/javascript/javascript-original.svg" title="JavaScript" alt="JavaScript" width="45" height="45"/>&nbsp;
     <img src="https://github.com/devicons/devicon/blob/master/icons/typescript/typescript-original.svg" title="TypeScript" alt="TypeScript" width="45" height="45"/>&nbsp;
     <img src="https://github.com/devicons/devicon/blob/master/icons/nextjs/nextjs-original.svg" title="Next.js" alt="Next.js" width="45" height="45"/>&nbsp;
-    <img src="https://github.com/devicons/devicon/blob/master/icons/nestjs/nestjs-plain.svg](https://github.com/devicons/devicon/blob/master/icons/nestjs/nestjs-original.svg)" title="Nest.js" alt="Nest.js" width="45" height="45"/>&nbsp;
+    <img src="https://github.com/devicons/devicon/blob/master/icons/nestjs/nestjs-plain.svg" title="Nest.js" alt="Nest.js" width="45" height="45"/>&nbsp;
     <img src="https://github.com/devicons/devicon/blob/master/icons/flask/flask-original.svg" title="Flask" alt="Flask" width="45" height="45"/>&nbsp;
     <img src="https://github.com/devicons/devicon/blob/master/icons/mongodb/mongodb-original.svg" title="MongoDB" alt="MongoDB" width="45" height="45"/>&nbsp;
     <img src="https://github.com/devicons/devicon/blob/master/icons/mysql/mysql-original.svg" title="MySQL" alt="MySQL" width="45" height="45"/>&nbsp;
