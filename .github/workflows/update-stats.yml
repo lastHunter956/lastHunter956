@@ -1,4 +1,4 @@
-name: Update GitHub Profile SVGs
+name: Update Profile SVGs & Stats
 
 on:
   schedule:
@@ -11,7 +11,7 @@ permissions:
   contents: write
 
 jobs:
-  update-profile:
+  update-stats:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -25,20 +25,21 @@ jobs:
       - name: Install Python dependencies
         run: pip install -r scripts/requirements.txt
 
-      - name: Fetch GitHub contributions and generate SVGs
+      - name: Fetch GitHub data and generate SVG panels
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GH_PROFILE_USER: lastHunter956
+          GH_PROFILE_USER: ${{ github.repository_owner }}
         run: python scripts/generate_profile.py
 
       - name: Commit and push updated SVGs
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/contributions.json data/profile_stats.json contrib-heatmap.svg ascii-portrait.svg stats.svg
+          git add data/ header-terminal.svg ascii-portrait.svg neofetch-stats.svg languages-radar.svg activity-clock.svg cards/
           if git diff --cached --quiet; then
-            echo "No changes to commit."
+            echo "No SVG changes to commit."
             exit 0
           fi
-          git commit -m "chore: update profile SVGs [skip ci]"
-          git push
+          git commit -m "chore: update profile SVGs and stats [skip ci]"
+          git pull --rebase origin main
+          git push origin main

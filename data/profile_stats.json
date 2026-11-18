@@ -3,15 +3,148 @@
   "name": "Jes\u00fas Mart\u00ednez",
   "location": "Cartagena, Bol\u00edvar, Colombia",
   "bio": "Building innovative solutions at the intersection of artificial intelligence, web development, and information security.",
-  "website": "jesus-martinez.me",
-  "avatar_url": "https://avatars.githubusercontent.com/u/98895444?u=d37036fc74702ce3ef3fd18a66e10ff014edf28c&v=4",
-  "public_repos": 69,
+  "website": "jesusmartinez.tech",
+  "avatar_url": "https://avatars.githubusercontent.com/u/98895444?v=4",
+  "public_repos": 70,
   "total_stars": 6,
   "followers": 3,
-  "top_languages": [
-    "Python",
-    "TypeScript",
-    "Jupyter Notebook",
-    "HTML"
+  "total_prs": 12,
+  "total_issues": 1,
+  "year_commits": 136,
+  "languages": [
+    {
+      "name": "Jupyter Notebook",
+      "bytes": 1290000,
+      "pct": 17.2,
+      "color": "#DA5B0B"
+    },
+    {
+      "name": "TypeScript",
+      "bytes": 1200957,
+      "pct": 16.0,
+      "color": "#3178c6"
+    },
+    {
+      "name": "Dart",
+      "bytes": 1066269,
+      "pct": 14.2,
+      "color": "#00B4AB"
+    },
+    {
+      "name": "Python",
+      "bytes": 1046709,
+      "pct": 13.9,
+      "color": "#3572A5"
+    },
+    {
+      "name": "HTML",
+      "bytes": 702538,
+      "pct": 9.3,
+      "color": "#e34c26"
+    },
+    {
+      "name": "JavaScript",
+      "bytes": 402012,
+      "pct": 5.3,
+      "color": "#f1e05a"
+    },
+    {
+      "name": "Java",
+      "bytes": 386060,
+      "pct": 5.1,
+      "color": "#b07219"
+    }
+  ],
+  "hours": [
+    8,
+    4,
+    2,
+    0,
+    0,
+    5,
+    6,
+    10,
+    6,
+    3,
+    2,
+    3,
+    0,
+    5,
+    5,
+    3,
+    13,
+    14,
+    11,
+    3,
+    4,
+    15,
+    8,
+    8
+  ],
+  "weekdays": [
+    16,
+    25,
+    33,
+    15,
+    28,
+    9,
+    12
+  ],
+  "sampled_commits": 138,
+  "pinned_repos": [
+    {
+      "name": "finazaap",
+      "description": "",
+      "url": "https://github.com/lastHunter956/finazaap",
+      "stars": 4,
+      "forks": 0,
+      "language": "Dart",
+      "color": "#00B4AB"
+    },
+    {
+      "name": "Repx",
+      "description": "",
+      "url": "https://github.com/lastHunter956/Repx",
+      "stars": 1,
+      "forks": 2,
+      "language": "Dart",
+      "color": "#00B4AB"
+    },
+    {
+      "name": "Matematica-avanzadas-maestr-a",
+      "description": "",
+      "url": "https://github.com/lastHunter956/Matematica-avanzadas-maestr-a",
+      "stars": 1,
+      "forks": 0,
+      "language": "Jupyter Notebook",
+      "color": "#DA5B0B"
+    },
+    {
+      "name": "actividad_1_DS",
+      "description": "",
+      "url": "https://github.com/lastHunter956/actividad_1_DS",
+      "stars": 0,
+      "forks": 0,
+      "language": "HTML",
+      "color": "#e34c26"
+    },
+    {
+      "name": "actividad-de-constitucion",
+      "description": "",
+      "url": "https://github.com/lastHunter956/actividad-de-constitucion",
+      "stars": 0,
+      "forks": 0,
+      "language": "Code",
+      "color": "#58a6ff"
+    },
+    {
+      "name": "parcialDS2",
+      "description": "",
+      "url": "https://github.com/lastHunter956/parcialDS2",
+      "stars": 0,
+      "forks": 0,
+      "language": "JavaScript",
+      "color": "#f1e05a"
+    }
   ]
 }
