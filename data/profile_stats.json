@@ -13,46 +13,40 @@
   "year_commits": 137,
   "languages": [
     {
-      "name": "Jupyter Notebook",
-      "bytes": 1290000,
-      "pct": 17.2,
-      "color": "#DA5B0B"
-    },
-    {
-      "name": "TypeScript",
-      "bytes": 1200957,
-      "pct": 16.0,
-      "color": "#3178c6"
-    },
-    {
-      "name": "Dart",
-      "bytes": 1066269,
-      "pct": 14.2,
-      "color": "#00B4AB"
-    },
-    {
       "name": "Python",
-      "bytes": 1046709,
-      "pct": 13.9,
+      "bytes": 680000,
+      "pct": 27.4,
       "color": "#3572A5"
     },
     {
+      "name": "TypeScript",
+      "bytes": 400000,
+      "pct": 16.1,
+      "color": "#3178c6"
+    },
+    {
+      "name": "Jupyter Notebook",
+      "bytes": 360000,
+      "pct": 14.5,
+      "color": "#DA5B0B"
+    },
+    {
       "name": "HTML",
-      "bytes": 702538,
-      "pct": 9.3,
+      "bytes": 320000,
+      "pct": 12.9,
       "color": "#e34c26"
     },
     {
       "name": "JavaScript",
-      "bytes": 402012,
-      "pct": 5.3,
+      "bytes": 160000,
+      "pct": 6.5,
       "color": "#f1e05a"
     },
     {
-      "name": "Java",
-      "bytes": 386060,
-      "pct": 5.1,
-      "color": "#b07219"
+      "name": "Dart",
+      "bytes": 160000,
+      "pct": 6.5,
+      "color": "#00B4AB"
     }
   ],
   "hours": [
