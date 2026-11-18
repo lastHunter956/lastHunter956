@@ -43,22 +43,22 @@
 <br>
 <br>
 
-<!-- 5. Pinned Projects (Large 2-Column Code-Window Cards) -->
+<!-- 5. Featured Projects (Large 2-Column Code-Window Cards) -->
 
-<h3><code>lastHunter956@github ~ $ ls -la ./pinned-projects</code></h3>
+<h3><code>lastHunter956@github ~ $ ls -la ./featured-projects</code></h3>
 
 <table>
 <tr>
-<td valign="top"><a href="https://github.com/lastHunter956/finazaap"><img src="./cards/repo-1.svg" width="425" alt="finazaap" /></a></td>
-<td valign="top"><a href="https://github.com/lastHunter956/Repx"><img src="./cards/repo-2.svg" width="425" alt="Repx" /></a></td>
+<td valign="top"><a href="https://github.com/lastHunter956/finazaap"><img src="./cards/repo-1.svg" width="425" alt="finazaap — Moneo Personal Finance App" /></a></td>
+<td valign="top"><a href="https://github.com/lastHunter956/Repx"><img src="./cards/repo-2.svg" width="425" alt="Repx — AI Camera Workout Trainer" /></a></td>
 </tr>
 <tr>
-<td valign="top"><a href="https://github.com/lastHunter956/Matematica-avanzadas-maestr-a"><img src="./cards/repo-3.svg" width="425" alt="Matematica-avanzadas-maestr-a" /></a></td>
-<td valign="top"><a href="https://github.com/lastHunter956/actividad_1_DS"><img src="./cards/repo-4.svg" width="425" alt="actividad_1_DS" /></a></td>
+<td valign="top"><a href="https://github.com/lastHunter956/DeclaraCheck"><img src="./cards/repo-3.svg" width="425" alt="DeclaraCheck — Automated Customs Declaration Auditor" /></a></td>
+<td valign="top"><a href="https://github.com/lastHunter956/Transcriptor-medico"><img src="./cards/repo-4.svg" width="425" alt="Transcriptor-medico — AI Medical Transcription App" /></a></td>
 </tr>
 <tr>
-<td valign="top"><a href="https://github.com/lastHunter956/actividad-de-constitucion"><img src="./cards/repo-5.svg" width="425" alt="actividad-de-constitucion" /></a></td>
-<td valign="top"><a href="https://github.com/lastHunter956/parcialDS2"><img src="./cards/repo-6.svg" width="425" alt="parcialDS2" /></a></td>
+<td valign="top"><a href="https://github.com/lastHunter956/web-Modelo-Prediccion-Febril-UniSinu"><img src="./cards/repo-5.svg" width="425" alt="web-Modelo-Prediccion-Febril-UniSinu — Pediatric ML Prediction" /></a></td>
+<td valign="top"><a href="https://github.com/lastHunter956/agroAnalitcs"><img src="./cards/repo-6.svg" width="425" alt="agroAnalitcs — MinTIC AgTech Market Forecasting" /></a></td>
 </tr>
 </table>
 

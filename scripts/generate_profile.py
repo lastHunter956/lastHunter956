@@ -72,14 +72,14 @@ LANG_COLORS = {
     "Go": "#00ADD8",
 }
 
-PINNED_FALLBACK_DESC = {
-    "finazaap": "Moneo — Personal finance tracker & smart expense analytics app.",
-    "Repx": "Mobile application built with Dart & Flutter for tracking workflows.",
-    "Matematica-avanzadas-maestr-a": "Master's coursework in advanced mathematics & modeling.",
-    "actividad_1_DS": "Data Science foundations & interactive web data visualizations.",
-    "actividad-de-constitucion": "Structured academic repository & technical documentation.",
-    "parcialDS2": "Data Science II evaluation & JavaScript data analysis tools.",
-}
+FEATURED_REPOS = [
+    ("finazaap", "Dart", 4, 0, "Moneo — Personal finance app built with Flutter for tracking income & expenses."),
+    ("Repx", "Dart", 1, 2, "REPX — AI camera personal trainer counting push-ups & pull-ups with form feedback."),
+    ("DeclaraCheck", "Python", 0, 0, "Automated customs declaration auditor validating forms vs support docs."),
+    ("Transcriptor-medico", "Dart", 0, 0, "AI medical voice & text transcription app generating structured clinical reports."),
+    ("web-Modelo-Prediccion-Febril-UniSinu", "JavaScript", 0, 1, "ML web platform predicting pediatric febrile severity with Next.js & FastAPI."),
+    ("agroAnalitcs", "Dart", 0, 0, "MinTIC AgTech app forecasting crop market trends to guide farmers' sales."),
+]
 
 GRAPHQL_QUERY = """
 query($login: String!) {
@@ -294,17 +294,20 @@ def fetch_via_graphql(username: str, token: str) -> tuple[dict, dict] | None:
             weekdays[dt.weekday()] += 1
             sampled_commits += 1
 
-    pinned = []
-    for p in (user.get("pinnedItems") or {}).get("nodes") or []:
-        pl = p.get("primaryLanguage") or {}
-        pinned.append({
-            "name": p["name"],
-            "description": (p.get("description") or "").strip(),
-            "url": p["url"],
-            "stars": int(p.get("stargazerCount", 0)),
-            "forks": int(p.get("forkCount", 0)),
-            "language": pl.get("name") or "Code",
-            "color": pl.get("color") or LANG_COLORS.get(pl.get("name", ""), BLUE),
+    repo_by_name = {r["name"]: r for r in repos}
+    featured = []
+    for name, def_lang, def_stars, def_forks, def_desc in FEATURED_REPOS:
+        rinfo = repo_by_name.get(name, {})
+        pl = rinfo.get("primaryLanguage") or {}
+        lang = pl.get("name") or def_lang
+        featured.append({
+            "name": name,
+            "description": (rinfo.get("description") or "").strip() or def_desc,
+            "url": rinfo.get("url") or f"https://github.com/{username}/{name}",
+            "stars": int(rinfo.get("stargazerCount", def_stars)),
+            "forks": int(rinfo.get("forkCount", def_forks)),
+            "language": lang,
+            "color": pl.get("color") or LANG_COLORS.get(lang, BLUE),
         })
 
     # Preserve cached activity clock if unauthenticated REST rate-limited /commits
@@ -336,7 +339,7 @@ def fetch_via_graphql(username: str, token: str) -> tuple[dict, dict] | None:
         "hours": hours,
         "weekdays": weekdays,
         "sampled_commits": sampled_commits,
-        "pinned_repos": pinned,
+        "pinned_repos": featured,
     }
     return contrib_data, profile_data
 
@@ -453,21 +456,19 @@ def fetch_via_public(username: str, token: str | None) -> tuple[dict, dict]:
     if r_is.status_code == 200:
         total_issues = int(r_is.json().get("total_count", 0))
 
-    pinned = scrape_pinned_repos(username, repo_map)
-    if not pinned:
-        top_sorted = sorted(own_repos, key=lambda x: (-x.get("stargazers_count", 0), x["name"]))[:6]
-        pinned = [
-            {
-                "name": r["name"],
-                "description": r.get("description") or "",
-                "url": r["html_url"],
-                "stars": int(r.get("stargazers_count", 0)),
-                "forks": int(r.get("forks_count", 0)),
-                "language": r.get("language") or "Code",
-                "color": LANG_COLORS.get(r.get("language") or "", BLUE),
-            }
-            for r in top_sorted
-        ]
+    featured = []
+    for name, def_lang, def_stars, def_forks, def_desc in FEATURED_REPOS:
+        info = repo_map.get(name, {})
+        lang = info.get("language") or def_lang
+        featured.append({
+            "name": name,
+            "description": (info.get("description") or "").strip() or def_desc,
+            "url": info.get("html_url") or f"https://github.com/{username}/{name}",
+            "stars": int(info.get("stargazers_count", def_stars)),
+            "forks": int(info.get("forks_count", def_forks)),
+            "language": lang,
+            "color": LANG_COLORS.get(lang, BLUE),
+        })
 
     # Preserve cached activity clock if unauthenticated REST rate-limited /commits
     if sampled_commits == 0 and (DATA_DIR / "profile_stats.json").exists():
@@ -498,7 +499,7 @@ def fetch_via_public(username: str, token: str | None) -> tuple[dict, dict]:
         "hours": hours,
         "weekdays": weekdays,
         "sampled_commits": sampled_commits,
-        "pinned_repos": pinned,
+        "pinned_repos": featured,
     }
     return contrib_data, profile_data
 
@@ -1002,7 +1003,6 @@ def render_neofetch_stats_svg(contrib: dict, profile: dict, out_path: Path, stat
             f'<rect x="{cx:.1f}" y="{cy:.1f}" width="{card_w:.1f}" height="{card_h:.1f}" '
             f'rx="8" fill="{TILE_BG}" stroke="{FRAME}"/>'
         )
-        parts.append(f'<line x1="{cx + 8:.1f}" y1="{cy + 0.5:.1f}" x2="{cx + card_w - 8:.1f}" y2="{cy + 0.5:.1f}" stroke="{accent}" stroke-opacity="0.65"/>')
         parts.append(f'<text x="{cx + 12:.1f}" y="{cy + 19:.1f}" fill="{MUTED}" font-size="11">{html.escape(label)}</text>')
         parts.append(f'<text x="{cx + 12:.1f}" y="{cy + 46:.1f}" fill="{accent}" font-size="22" font-weight="700">{html.escape(val)}</text>')
         parts.append(f'<text x="{cx + 12:.1f}" y="{cy + 64:.1f}" fill="{MUTED}" font-size="10.5">{html.escape(sub)}</text>')
@@ -1361,9 +1361,7 @@ def render_repo_cards(profile: dict, cards_dir: Path, static: bool = False) -> N
 
     for idx, repo in enumerate(repos, start=1):
         name = repo["name"]
-        desc = repo.get("description") or PINNED_FALLBACK_DESC.get(
-            name, f"{repo.get('language', 'Software')} repository by @{profile['username']}."
-        )
+        desc = repo.get("description") or f"{repo.get('language', 'Software')} project by @{profile['username']}."
         wrapped = textwrap.wrap(desc, width=42)[:2]
         if len(wrapped) == 2 and len(desc) > 84:
             wrapped[1] = wrapped[1][:39].rstrip() + "..."
@@ -1382,14 +1380,14 @@ def render_repo_cards(profile: dict, cards_dir: Path, static: bool = False) -> N
         ]
         parts.extend(
             rich_chrome(
-                W, H, f"~/repos/{name[:26]}",
+                W, H, f"~/repos/{name[:30]}",
                 f"rbg{idx}", glow_a=lcol, glow_b=NEON_CYAN, border_col=FRAME, title_h=title_h, pad=16.0,
             )
         )
-        parts.append(f'<line x1="12" y1="1" x2="{W - 12}" y2="1" stroke="{lcol}" stroke-width="2.5" stroke-opacity="0.85"/>')
 
-        disp_name = name if len(name) <= 23 else name[:21] + ".."
-        parts.append(f'<text x="{pad}" y="62" font-size="18" font-weight="700" fill="{NEON_CYAN}">{html.escape(disp_name)}</text>')
+        disp_name = name if len(name) <= 29 else name[:27] + ".."
+        name_size = 16.5 if len(disp_name) > 22 else 18
+        parts.append(f'<text x="{pad}" y="62" font-size="{name_size}" font-weight="700" fill="{NEON_CYAN}">{html.escape(disp_name)}</text>')
         parts.append(f'<rect x="{W - pad - 64}" y="45" width="64" height="22" rx="11" fill="{TILE_BG}" stroke="{FRAME}"/>')
         parts.append(f'<text x="{W - pad - 32}" y="60" font-size="10.5" font-weight="700" fill="{NEON_GREEN}" text-anchor="middle">PUBLIC</text>')
 

@@ -84,6 +84,61 @@
     55,
     86
   ],
-  "sampled_commits": 402,
-  "pinned_repos": []
+  "sampled_commits": 140,
+  "pinned_repos": [
+    {
+      "name": "finazaap",
+      "description": "Moneo \u2014 Personal finance app built with Flutter for tracking income & expenses.",
+      "url": "https://github.com/lastHunter956/finazaap",
+      "stars": 4,
+      "forks": 0,
+      "language": "Dart",
+      "color": "#00B4AB"
+    },
+    {
+      "name": "Repx",
+      "description": "REPX \u2014 AI camera personal trainer counting push-ups & pull-ups with form feedback.",
+      "url": "https://github.com/lastHunter956/Repx",
+      "stars": 1,
+      "forks": 2,
+      "language": "Dart",
+      "color": "#00B4AB"
+    },
+    {
+      "name": "DeclaraCheck",
+      "description": "Automated customs declaration auditor validating forms vs support docs.",
+      "url": "https://github.com/lastHunter956/DeclaraCheck",
+      "stars": 0,
+      "forks": 0,
+      "language": "Python",
+      "color": "#3572A5"
+    },
+    {
+      "name": "Transcriptor-medico",
+      "description": "AI medical voice & text transcription app generating structured clinical reports.",
+      "url": "https://github.com/lastHunter956/Transcriptor-medico",
+      "stars": 0,
+      "forks": 0,
+      "language": "Dart",
+      "color": "#00B4AB"
+    },
+    {
+      "name": "web-Modelo-Prediccion-Febril-UniSinu",
+      "description": "ML web platform predicting pediatric febrile severity with Next.js & FastAPI.",
+      "url": "https://github.com/lastHunter956/web-Modelo-Prediccion-Febril-UniSinu",
+      "stars": 0,
+      "forks": 1,
+      "language": "JavaScript",
+      "color": "#f1e05a"
+    },
+    {
+      "name": "agroAnalitcs",
+      "description": "MinTIC AgTech app forecasting crop market trends to guide farmers' sales.",
+      "url": "https://github.com/lastHunter956/agroAnalitcs",
+      "stars": 0,
+      "forks": 0,
+      "language": "Dart",
+      "color": "#00B4AB"
+    }
+  ]
 }
