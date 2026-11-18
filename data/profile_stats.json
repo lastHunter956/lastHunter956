@@ -123,13 +123,13 @@
       "color": "#00B4AB"
     },
     {
-      "name": "web-Modelo-Prediccion-Febril-UniSinu",
-      "description": "ML web platform predicting pediatric febrile severity with Next.js & FastAPI.",
-      "url": "https://github.com/lastHunter956/web-Modelo-Prediccion-Febril-UniSinu",
+      "name": "skills-hackaton-medellin",
+      "description": "Open Payments & Rafiki Agentic Skills toolkit for AI fintech integrations.",
+      "url": "https://github.com/lastHunter956/skills-hackaton-medellin",
       "stars": 0,
-      "forks": 1,
-      "language": "JavaScript",
-      "color": "#f1e05a"
+      "forks": 0,
+      "language": "Python",
+      "color": "#3572A5"
     },
     {
       "name": "agroAnalitcs",

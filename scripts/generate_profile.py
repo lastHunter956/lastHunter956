@@ -77,7 +77,7 @@ FEATURED_REPOS = [
     ("Repx", "Dart", 1, 2, "REPX — AI camera personal trainer counting push-ups & pull-ups with form feedback."),
     ("DeclaraCheck", "Python", 0, 0, "Automated customs declaration auditor validating forms vs support docs."),
     ("Transcriptor-medico", "Dart", 0, 0, "AI medical voice & text transcription app generating structured clinical reports."),
-    ("web-Modelo-Prediccion-Febril-UniSinu", "JavaScript", 0, 1, "ML web platform predicting pediatric febrile severity with Next.js & FastAPI."),
+    ("skills-hackaton-medellin", "Python", 0, 0, "Open Payments & Rafiki Agentic Skills toolkit for AI fintech integrations."),
     ("agroAnalitcs", "Dart", 0, 0, "MinTIC AgTech app forecasting crop market trends to guide farmers' sales."),
 ]
 

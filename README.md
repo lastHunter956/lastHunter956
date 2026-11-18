@@ -57,7 +57,7 @@
 <td valign="top"><a href="https://github.com/lastHunter956/Transcriptor-medico"><img src="./cards/repo-4.svg" width="425" alt="Transcriptor-medico — AI Medical Transcription App" /></a></td>
 </tr>
 <tr>
-<td valign="top"><a href="https://github.com/lastHunter956/web-Modelo-Prediccion-Febril-UniSinu"><img src="./cards/repo-5.svg" width="425" alt="web-Modelo-Prediccion-Febril-UniSinu — Pediatric ML Prediction" /></a></td>
+<td valign="top"><a href="https://github.com/lastHunter956/skills-hackaton-medellin"><img src="./cards/repo-5.svg" width="425" alt="skills-hackaton-medellin — Open Payments Agentic Skills" /></a></td>
 <td valign="top"><a href="https://github.com/lastHunter956/agroAnalitcs"><img src="./cards/repo-6.svg" width="425" alt="agroAnalitcs — MinTIC AgTech Market Forecasting" /></a></td>
 </tr>
 </table>
