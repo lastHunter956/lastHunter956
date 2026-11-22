@@ -10,81 +10,81 @@
   "followers": 3,
   "total_prs": 12,
   "total_issues": 1,
-  "year_commits": 140,
+  "year_commits": 330,
   "languages": [
     {
       "name": "Jupyter Notebook",
       "bytes": 1290000,
-      "pct": 17.1,
+      "pct": 16.5,
       "color": "#DA5B0B"
     },
     {
       "name": "TypeScript",
       "bytes": 1200957,
-      "pct": 15.9,
+      "pct": 15.4,
       "color": "#3178c6"
     },
     {
       "name": "Python",
-      "bytes": 1077343,
-      "pct": 14.3,
+      "bytes": 1134914,
+      "pct": 14.5,
       "color": "#3572A5"
     },
     {
       "name": "Dart",
       "bytes": 1066269,
-      "pct": 14.1,
+      "pct": 13.7,
       "color": "#00B4AB"
     },
     {
       "name": "HTML",
-      "bytes": 702538,
-      "pct": 9.3,
+      "bytes": 704229,
+      "pct": 9.0,
       "color": "#e34c26"
     },
     {
       "name": "JavaScript",
-      "bytes": 402012,
-      "pct": 5.3,
+      "bytes": 403939,
+      "pct": 5.2,
       "color": "#f1e05a"
     }
   ],
   "hours": [
-    11,
-    4,
+    8,
+    8,
     2,
     0,
     0,
-    5,
+    4,
     6,
-    10,
-    6,
-    3,
+    9,
+    4,
+    2,
     4,
     3,
     0,
-    5,
-    5,
     3,
-    13,
-    21,
+    6,
     14,
-    3,
+    17,
+    21,
+    12,
+    2,
     4,
-    15,
-    8,
-    8
+    13,
+    12,
+    27
   ],
   "weekdays": [
-    16,
-    25,
-    43,
-    17,
     30,
-    10,
-    12
+    41,
+    43,
+    12,
+    24,
+    24,
+    7
   ],
-  "sampled_commits": 153,
+  "sampled_commits": 181,
   "pinned_repos": [
     {
       "name": "finazaap",
