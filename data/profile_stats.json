@@ -50,7 +50,7 @@
     }
   ],
   "hours": [
-    8,
+    9,
     8,
     2,
     0,
@@ -59,7 +59,7 @@
     6,
     9,
     4,
-    2,
+    3,
     4,
     3,
     0,
@@ -76,15 +76,15 @@
     27
   ],
   "weekdays": [
-    30,
+    31,
     41,
     43,
     12,
     24,
     24,
-    7
+    8
   ],
-  "sampled_commits": 181,
+  "sampled_commits": 183,
   "pinned_repos": [
     {
       "name": "finazaap",
